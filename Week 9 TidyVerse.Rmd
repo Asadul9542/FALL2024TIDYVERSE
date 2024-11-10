@@ -1,0 +1,50 @@
+---
+title: "Week 9 TidyVerse/GitHub CREATE assignment"
+author: "MD Asadul Islam"
+date: "`r Sys.Date()`"
+output: openintro::lab_report
+---
+
+```{r load-packages, message=FALSE}
+library(tidyverse)
+library(readr)
+```
+
+### DataSet
+
+Article Link - https://projects.fivethirtyeight.com/redlining/
+
+Dataset Link on Github - https://github.com/fivethirtyeight/data/blob/master/redlining/metro-grades.csv
+
+### Capability 1: readr - readd_csv
+
+Here we use the read_csv function for reading the csv file from Github. Then we compare the time taken to read CSV file using the tidyverse library and the R default fucntion which is read.csv. from the results
+
+```{r code-chunk-for readr}
+redlining_pop <-  read.csv("https://raw.githubusercontent.com/fivethirtyeight/data/refs/heads/master/redlining/metro-grades.csv")
+
+head(redlining_pop)
+
+system.time(d<-read.csv("https://raw.githubusercontent.com/fivethirtyeight/data/refs/heads/master/redlining/metro-grades.csv"))
+
+system.time(d<-read_csv("https://raw.githubusercontent.com/fivethirtyeight/data/refs/heads/master/redlining/metro-grades.csv"))
+
+```
+
+### Capability 2: dplyr- filter()
+
+using dplyr, we can filter the rows from the dataframe using the filter function. We apply the filter to population dataframe based on other population column
+
+```{r code lable for Capability 2 dplyr}
+filter(redlining_pop, other_pop > 2000)
+```
+
+### Capability 3: dplyr - Select
+
+Just as we filtered the rows of the dataframe in the above example, we can use select function to filter columns of the dataframe. If you want only specific columns rather than the whole set of columns we can use select function from dplyr.Here I filter black, white, asian, hispanian, other, and total population.
+
+```{r code chunk for select from dplyr}
+select(redlining_pop,c("white_pop","black_pop","hisp_pop", "asian_pop","other_pop","total_pop"))
+
+```
+
