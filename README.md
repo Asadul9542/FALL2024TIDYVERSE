@@ -41,13 +41,13 @@ Data source: https://github.com/fivethirtyeight/data/tree/master/alcohol-consump
 =======
 
 Brandon Chung - Sample Vignette of TidyVerse package: dplyr. Examples of the functions Mutate(), Select(), Filter(), and Summarise(). 
-
 Data source: https://www.kaggle.com/datasets/aayushmishra1512/faang-complete-stock-data?select=Google.csv
 =======
 
 Chi Hang (Philip) Cheung
 Data source: https://www.kaggle.com/datasets/valakhorasani/mobile-device-usage-and-user-behavior-dataset
 TidyVerse function: examples of string_detect and ggplot2
+Extended by Inna Yedzinovich and Yanyi Li
 =======
 
 Stephanie Chiang - `SC_vignette.md`
@@ -60,5 +60,19 @@ Sample Vignette on map, map_df, map2, and pmap functions
 Package: Purrr
 Data source: https://www.kaggle.com/datasets/bhadramohit/agriculture-and-farming-dataset
 File: MC-Purrr-Vignette.Rmd
+Extended by Brandon Chung (modify and modify_if)
 =======
 
+Nakesha Fray: Vignette of tidyverse using readr, tidy, dplyr, and ggplot. Data Source: Where People Go To Check The Weather by Walt Hickey: https://fivethirtyeight.com/features/weather-forecast-news-app-habits/
+
+=======
+Ariba Mandavia: This vignette provides a comprehensive example of using dplyr for data manipulation and ggplot2 for data visualization with a real-world dataset!
+Data Source: https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/data
+Extended by Shri Tripathi
+=======
+
+Erick Hadi
+Tidyverse: How to do simple data analysis using Tidyverse.
+Data: https://www.kaggle.com/datasets/bhadramohit/customer-shopping-latest-trends-dataset/data 
+
+=======
