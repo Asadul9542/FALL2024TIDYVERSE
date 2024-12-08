@@ -1,4 +1,11 @@
 ---
+title: "TidyVerse-GitHub EXTEND"
+author: "MD Asadul  Islam"
+date: 
+output: html_document
+---
+
+---
 title: "Brandon Chung - Vignette of Dplyr mutate, select, filter, and summarise"
 author: "Brandon Chung"
 date: "`r Sys.Date()`"
@@ -11,6 +18,11 @@ library(tidyverse)
 
 Cloned and commit version
 
+### Extended Tidyverse ggplot2 functions include: 
+1. ()
+2. Group_by()
+
+
 ## Sample Vignette of TidyVerse package: dplyr. Examples of the functions Mutate(), Select(), Filter(), and Summarise() 
 
 
@@ -22,6 +34,7 @@ https://www.kaggle.com/datasets/aayushmishra1512/faang-complete-stock-data?selec
 ```{r}
 #Loading the Data
 google_data <- read.csv("https://raw.githubusercontent.com/Chung-Brandon/FALL2024TIDYVERSE/refs/heads/main/Google.csv")
+google_data
 ```
 
 ## Mutate()
@@ -96,4 +109,29 @@ google_data %>%
 # Here we wanted to summarize our data by pulling out statistics of count and average volume. I first grouped the data by day_pchange.5 values (TRUE or FALSE), then the summarise function pulls the statistics for each group. Using group_by then summarise makes for easy statistic comparisons.
 ```
 
+### ggplot2
+```{r code for arrange dplyr package}
+library(ggplot2)
+
+# Create a simple scatter plot
+ggplot(data = google_data, aes(x = Date, y = Volume)) +
+  geom_point() 
+
+# Create a scatter plot of date vs. volume
+ggplot(google_data, aes(x = Date, y = Volume, state = factor(Open))) +
+  geom_point() +
+  labs(title = "Scatter plot of Date vs. Volume",
+       x = "Date",
+       y = "Volume in Liters",
+       state = "Open")
+
+
+
+
+```
+
+
+
 ### Conclusion: The TidyVerse's Dplyr package is great at solving data manipulation challenages and for running statistical comparisons between groups of variable values.
+
+Tidyverse dplyr contains more functions than the ones that are already highlighted. Their user is diverse when doing data manipulation and doing analysing of a dataset in order to identify patterns and make data useful in the business world.
